@@ -70,6 +70,47 @@ async function slap() {
     };
 };
 
+async function poke() {
+    try {
+        const body = await fetch(`${baseurl}${animeEndpoint}/poke`)
+        const result = await body.json();
+        if (typeof result === "object") return result;
+    } catch (error) {
+        return "[HUSKY-API wrapper: poke()] We encountered a error on our end. Try again later!";
+    };
+};
+
+async function pat() {
+    try {
+        const body = await fetch(`${baseurl}${animeEndpoint}/pat`)
+        const result = await body.json();
+        if (typeof result === "object") return result;
+    } catch (error) {
+        return "[HUSKY-API wrapper: pat()] We encountered a error on our end. Try again later!";
+    };
+};
+
+async function nekoImg() {
+    try {
+        const body = await fetch(`${baseurl}${animeEndpoint}/nekoImg`)
+        const result = await body.json();
+        if (typeof result === "object") return result;
+    } catch (error) {
+        return "[HUSKY-API wrapper: nekoImg()] We encountered a error on our end. Try again later!";
+    };
+};
+
+async function nekoGif() {
+    try {
+        const body = await fetch(`${baseurl}${animeEndpoint}/nekoGif`)
+        const result = await body.json();
+        if (typeof result === "object") return result;
+    } catch (error) {
+        return "[HUSKY-API wrapper: nekoGif()] We encountered a error on our end. Try again later!";
+    };
+};
+
+
 module.exports = {
     version,
     eightball,
@@ -77,6 +118,10 @@ module.exports = {
     smug,
     baka,
     tickle,
-    slap
+    slap,
+    poke,
+    pat,
+    nekoImg,
+    nekoGif
 };
 
