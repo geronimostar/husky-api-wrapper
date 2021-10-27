@@ -5,13 +5,13 @@ const funEndpoint = "/fun";
 const animeEndpoint = "/anime";
 const nsfwEndpoint = "/nsfw";
 const infoEndpoint = "/info";
-const version = "1.0.5";
+const version = "1.0.6";
 
 //fun endpoints
 
 async function eightball() {
     try {
-        const body = await fetch(`${baseurl}/8ball`);
+        const body = await fetch(`${baseurl}${funEndpoint}/8ball`);
         const result = await body.json();
         if (typeof result === "object") return result;
     } catch (error) {
