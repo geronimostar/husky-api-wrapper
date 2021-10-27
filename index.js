@@ -5,6 +5,7 @@ const funEndpoint = "/fun";
 const animeEndpoint = "/anime";
 const nsfwEndpoint = "/nsfw";
 const infoEndpoint = "/info";
+const version = "1.0.3";
 
 //fun endpoints
 
@@ -19,7 +20,7 @@ async function eightball() {
 };
 
 async function anime(name) {
-    if (!name) return "[HUSKY-AP wrapper: anime()] No anime name was provided.";
+    if (!name) return "[HUSKY-API wrapper: anime()] No anime name was provided.";
     const body = await fetch(`${baseurl}${animeEndpoint}?name=${encodeURIComponent(name)}`)
     const result = await body.json();
     try {
@@ -31,6 +32,7 @@ async function anime(name) {
 
 
 module.exports = {
+    version,
     eightball,
     anime
 };
