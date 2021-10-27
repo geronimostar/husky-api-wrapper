@@ -1,0 +1,23 @@
+{
+  "name": "husky-api-wrapper",
+  "version": "1.0.0",
+  "description": "The NodeJS wrapper for api.huskyio.repl.co!",
+  "main": "index.js",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Husky#2514 (Discord)",
+  "license": "MIT",
+  "keywords": [
+    "api",
+    "husky",
+    "husky-api",
+    "husky-api-wrapper",
+    "husky wrapper",
+    "husky api wrapper"
+  ]
+}
