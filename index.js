@@ -7,7 +7,7 @@ const nsfwEndpoint = "/nsfw";
 const infoEndpoint = "/info";
 const miscEndpoint = "/misc";
 const animalsEndpoint = "/animals";
-const version = "1.0.9";
+const version = "1.1.0";
 
 //fun endpoints
 
