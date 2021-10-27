@@ -215,25 +215,27 @@ async function waifu() {
 
 module.exports = {
     version,
-    eightball,
-    anime,
-    smug,
-    baka,
-    tickle,
-    slap,
-    poke,
-    pat,
-    nekoImg,
-    nekoGif,
-    hug,
-    foxGirl,
-    feed,
-    cuddle,
-    kemonomimi,
-    holo,
-    wallpaper,
-    gecg,
-    avatar, 
-    waifu
+    sfw: {
+      eightball,
+      anime,
+      smug,
+      baka,
+      tickle,
+      slap,
+      poke,
+      pat,
+      nekoImg,
+      nekoGif,
+      hug,
+      foxGirl,
+      feed,
+      cuddle,
+      kemonomimi,
+      holo,
+      wallpaper,
+      gecg,
+      avatar, 
+      waifu
+   }
 };
 
