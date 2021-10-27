@@ -18,7 +18,20 @@ async function eightball() {
     };
 };
 
+async function anime(name) {
+    if (!name) return "[HUSKY-AP wrapper: anime()] No anime name was provided.";
+    const body = await fetch(`${baseurl}${animeEndpoint}?name=${encodeURIComponent(name)}`)
+    const result = await body.json();
+    try {
+        if (typeof result === "object") return result;
+    } catch (error) {
+        return "[HUSKY-API wrapper: anime()] We encountered a error on our end. Try again later!";
+    };
+};
+
+
 module.exports = {
-    eightball
+    eightball,
+    anime
 };
 
