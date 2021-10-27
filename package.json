@@ -1,6 +1,6 @@
 {
   "name": "husky-api-wrapper",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "The NodeJS wrapper for api.huskyio.repl.co!",
   "main": "index.js",
   "dependencies": {
