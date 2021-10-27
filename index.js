@@ -5,7 +5,7 @@ const funEndpoint = "/fun";
 const animeEndpoint = "/anime";
 const nsfwEndpoint = "/nsfw";
 const infoEndpoint = "/info";
-const version = "1.0.7";
+const version = "1.0.8";
 
 //fun endpoints
 
@@ -50,11 +50,33 @@ async function baka() {
     };
 };
 
+async function tickle() {
+    try {
+        const body = await fetch(`${baseurl}${animeEndpoint}/tickle`)
+        const result = await body.json();
+        if (typeof result === "object") return result;
+    } catch (error) {
+        return "[HUSKY-API wrapper: tickle()] We encountered a error on our end. Try again later!";
+    };
+};
+
+async function slap() {
+    try {
+        const body = await fetch(`${baseurl}${animeEndpoint}/slap`)
+        const result = await body.json();
+        if (typeof result === "object") return result;
+    } catch (error) {
+        return "[HUSKY-API wrapper: slap()] We encountered a error on our end. Try again later!";
+    };
+};
+
 module.exports = {
     version,
     eightball,
     anime,
     smug,
-    baka
+    baka,
+    tickle,
+    slap
 };
 
