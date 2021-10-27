@@ -152,13 +152,13 @@ async function cuddle() {
     };
 };
 
-async function kemonomini() {
+async function kemonomimi() {
     try {
-        const body = await fetch(`${baseurl}${animeEndpoint}/kemonomini`)
+        const body = await fetch(`${baseurl}${animeEndpoint}/kemonomimi`)
         const result = await body.json();
         if (typeof result === "object") return result;
     } catch (error) {
-        return "[HUSKY-API wrapper: kemonomini()] We encountered a error on our end. Try again later!";
+        return "[HUSKY-API wrapper: kemonomimi()] We encountered a error on our end. Try again later!";
     };
 };
 
@@ -229,7 +229,7 @@ module.exports = {
     foxGirl,
     feed,
     cuddle,
-    kemonomini,
+    kemonomimi,
     holo,
     wallpaper,
     gecg,
