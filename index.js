@@ -5,7 +5,7 @@ const funEndpoint = "/fun";
 const animeEndpoint = "/anime";
 const nsfwEndpoint = "/nsfw";
 const infoEndpoint = "/info";
-const version = "1.0.4";
+const version = "1.0.5";
 
 //fun endpoints
 
