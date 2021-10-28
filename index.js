@@ -7,7 +7,7 @@ const nsfwEndpoint = "/nsfw";
 const infoEndpoint = "/info";
 const miscEndpoint = "/misc";
 const animalsEndpoint = "/animals";
-const version = "1.1.2";
+const version = "1.1.3";
 
 //fun endpoints
 
@@ -34,7 +34,7 @@ async function subreddit(q) {
 };
 
 async function anime(q) {
-    if (!name) return "[HUSKY-API wrapper: anime()] No anime name was provided.";
+    if (!q) return "[HUSKY-API wrapper: anime()] No anime name was provided.";
     try {
         const body = await fetch(`${baseurl}${animeEndpoint}?q=${encodeURIComponent(q)}`)
         const result = await body.json();
