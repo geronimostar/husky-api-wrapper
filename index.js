@@ -7,7 +7,7 @@ const nsfwEndpoint = "/nsfw";
 const infoEndpoint = "/info";
 const miscEndpoint = "/misc";
 const animalsEndpoint = "/animals";
-const version = "1.1.1";
+const version = "1.1.2";
 
 //fun endpoints
 
@@ -21,10 +21,22 @@ async function eightball() {
     };
 };
 
-async function anime(name) {
+async function subreddit(q) {
+    if (!q) return "No subreddit was provided!";
+    try {
+        const body = await fetch(`${baseurl}${miscEndpoint}/subreddit?q=${encodeURIComponent(q)}`)
+        const result = await body.json();
+        if (result.message ===  "Invalid subreddit!") return "Invalid subreddit!";
+        if (typeof result === "object") return result;
+    } catch (error) {
+        return "[HUSKY-API wrapper: subreddit()] We encountered a error on our end. Try again later!";
+    };
+};
+
+async function anime(q) {
     if (!name) return "[HUSKY-API wrapper: anime()] No anime name was provided.";
     try {
-        const body = await fetch(`${baseurl}${animeEndpoint}?name=${encodeURIComponent(name)}`)
+        const body = await fetch(`${baseurl}${animeEndpoint}?q=${encodeURIComponent(q)}`)
         const result = await body.json();
         if (typeof result === "object") return result;
     } catch (error) {
@@ -217,6 +229,7 @@ module.exports = {
     version,
     sfw: {
       eightball,
+      subreddit,
       anime,
       smug,
       baka,
